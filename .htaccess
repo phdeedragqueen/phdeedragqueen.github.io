@@ -1,0 +1,11 @@
+# enable the directives - assuming they're not enabled globally
+ExpiresActive on
+
+# send an Expires: header for each of these mimetypes (as defined by server)
+ExpiresByType image/png "access plus 1 week"
+ExpiresByType image/gif "access plus 1 week"
+ExpiresByType image/jpeg "access plus 1 week"
+ExpiresByType image/jpg "access plus 1 week"
+
+# css may change a bit sometimes, so define shorter expiration
+ExpiresByType text/css "access plus 1 days"
